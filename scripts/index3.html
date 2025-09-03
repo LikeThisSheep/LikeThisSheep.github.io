@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de inicio de sesión para la tienda Guau&Miau.">
+    <meta name="keywords" content="login, tienda, formulario, Guau & Miau">
+    <title>TIENDA GUAU&MIAU</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">GUAU & MIAU</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#validationTooltip01">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://likethissheep.github.io/scripts/index4.html">Registrar usuario</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Formulario -->
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltip01" class="form-label">Correo electrónico</label>
+            <input class="form-control mb-3" id="validationTooltip01" type="email" placeholder="usuario@duoc.cl" required>
+            <div class="valid-tooltip">
+                Correo válido
+            </div>
+        </div>
+        <div class="col-md-4 position-relative">
+            <label for="validationTooltip02" class="form-label">Contraseña</label>
+            <input class="form-control mb-3" id="validationTooltip02" type="password" placeholder="Contraseña" required>
+            <div class="valid-tooltip">
+                Contraseña válida
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+        </div>
+    </form>
+
+    <script>
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+              .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                  if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                  }
+                  form.classList.add('was-validated')
+                }, false)
+              })
+        })()
+    </script>
+</body>
+</html>
