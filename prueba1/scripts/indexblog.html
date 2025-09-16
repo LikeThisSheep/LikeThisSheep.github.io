@@ -3,39 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog los tralaleros</title>
+  <title>Blog Los Tralaleros</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     body {
-      background-color: #000;
-      color: #fff;
+      background-color: #fff;
+      color: #000;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
     .navbar {
-      background-color: #111;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .navbar-brand {
+      font-weight: 600;
+      font-size: 1.3rem;
     }
     .hero {
-      background: linear-gradient(135deg, #00152e, #000);
       text-align: center;
       padding: 5rem 1rem;
+      background: linear-gradient(135deg, #eaf1ff, #fff);
     }
     .hero h2 {
       font-size: 2.5rem;
-      font-weight: 600;
+      font-weight: 700;
     }
     .hero p {
       font-size: 1.2rem;
+      color: #444;
     }
     .section-dark {
-      background-color: #111;
+      background-color: #f8f9fa;
       padding: 4rem 2rem;
     }
     .about-card {
-      background-color: #000;
+      background-color: #fff;
       border-radius: 1rem;
       padding: 3rem;
       text-align: center;
       transition: transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     .about-card:hover {
       transform: translateY(-5px);
@@ -47,55 +55,68 @@
     .about-card p {
       font-size: 1.1rem;
       line-height: 1.6;
-      color: #ccc;
+      color: #555;
     }
     .footer {
-      background-color: #111;
+      background-color: #fff;
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #aaa;
+      color: #777;
+      border-top: 1px solid #eee;
     }
-  
     .navbar-brand img {
-      height: 24px;
+      height: 30px;
     }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">
-      <img src="../assets/LosTralaleros.png" alt="Logo Tralaleros">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="../assets/LosTralaleros.png" alt="Logo" width="30" height="30" class="me-2">
+      <span class="fw-bold text-primary">Los Tralaleros</span>
     </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="https://likethissheep.github.io">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://likethissheep.github.io"">Productos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/prueba1/scripts/indexblog.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
 <section class="hero">
   <h2>Los Tralaleros Corp</h2>
   <p class="lead">Más que una empresa sobre merch de videojuegos.</p>
-  <a href="https://likethissheep.github.io" class="btn btn-light btn-lg mt-3">Ver catálogo</a>
+  <a href="https://likethissheep.github.io" class="btn btn-dark btn-lg mt-3">Ver catálogo</a>
 </section>
 
-<!-- Historia toda pro master crack racing -->
 <section class="section-dark">
   <div class="container">
     <div class="about-card mx-auto">
       <h2>Nuestra historia</h2>
       <p>
         Somos una empresa que fue creada a partir por tres personas con una pasión con los videojuegos, mediante una charla sobre productos de videojuegos,
-        se decidio crear esta con productos de diversas industrias de videojuegos con la misma alta calidad como nosotros como jugadores queremos.
+        se decidió crear esta con productos de diversas industrias de videojuegos con la misma alta calidad como nosotros como jugadores queremos.
       </p>
     </div>
   </div>
 </section>
 
-<!-- Sección misión e historia de la empresa blablablablabla-->
 <section class="section-dark">
   <div class="container py-5">
     <div class="row align-items-center g-4">
-      
       <div class="col-lg-6">
         <h2 class="fw-bold mb-3">Nuestra Misión</h2>
         <p class="lead text-secondary">
@@ -114,7 +135,6 @@
       <div class="col-lg-6 text-center order-lg-1 order-2">
         <img src="../assets/career-goals-1024x708.png" alt="Objetivo de la empresa" class="img-fluid rounded-4 shadow">
       </div>
-
       <div class="col-lg-6 order-lg-2 order-1">
         <h2 class="fw-bold mb-3">Nuestro objetivo</h2>
         <p class="lead text-secondary">
@@ -126,8 +146,6 @@
   </div>
 </section>
 
-
-<!-- Pata -->
 <footer class="footer">
   <p>© 2025 Los Tralaleros Corp. Todos los derechos reservados</p>
 </footer>
@@ -135,3 +153,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
