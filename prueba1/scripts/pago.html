@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pago - Los Tralaleros</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="../assets/LosTralaleros.png" alt="Logo" width="30" height="30" class="me-2">
+      <span class="fw-bold text-primary">Los Tralaleros</span>
+    </a>
+  </div>
+</nav>
+
+<div class="container" style="margin-top: 6rem;">
+  <h1 class="mb-4">Resumen de tu compra</h1>
+
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody id="cartItems"></tbody>
+    <tfoot>
+      <tr>
+        <th>Total</th>
+        <th id="cartTotal">$0</th>
+      </tr>
+    </tfoot>
+  </table>
+
+  <h2 class="mt-5 mb-3">Datos de pago</h2>
+  <form>
+    <div class="mb-3">
+      <label class="form-label">Nombre en la tarjeta</label>
+      <input type="text" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Número de tarjeta</label>
+      <input type="text" class="form-control" maxlength="16" required>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Expiración</label>
+        <input type="text" class="form-control" placeholder="MM/AA" required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label class="form-label">CVV</label>
+        <input type="text" class="form-control" maxlength="3" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success w-100">Confirmar pago</button>
+  </form>
+</div>
+
+<script>
+  // Este script es para cargar el carrito de forma local :brain:
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+
+  let total = 0;
+  cart.forEach(item => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${item.name}</td>
+      <td>$${item.price}</td>
+    `;
+    cartItems.appendChild(tr);
+    total += item.price;
+  });
+  cartTotal.textContent = "$" + total;
+</script>
+
+</body>
+</html>
+
