@@ -1,11 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Los Tralaleros Corp</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff;
+      color: #000;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .navbar-brand {
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
 </head>
 <body>
-    
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="/prueba1/assets/LosTralaleros.png" alt="Logo" width="30" height="30" class="me-2">
+      <span class="fw-bold text-primary">Los Tralaleros</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="d-flex align-items-center">
+      <a href="#" class="me-3">
+        <i class="bi bi-person fs-4"></i>
+      </a>
+      <a href="#" id="cartButton" class="position-relative">
+        <i class="bi bi-cart fs-4"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Bienvenido a Los Tralaleros</h1>
+  <p class="lead">La más alta calidad en merchandasing de videojuegos</p>
+</section>
+
+<section class="container py-5">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/prueba1/assets/Sakuramiku.png" class="card-img-top" alt="Producto 1">
+        <div class="card-body">
+          <h5 class="card-title">Figura Sakura Miku</h5>
+          <p class="card-text">Figura oficial de Hatsune Miku. $20.000</p>
+          <button class="btn btn-dark add-to-cart" data-price="20000">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Insertar imágen" class="card-img-top" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Producto 2</h5>
+          <p class="card-text">Debemos crear la descripción del producto.</p>
+          <button class="btn btn-dark add-to-cart" data-price="4">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Insertar imágen" class="card-img-top" alt="Producto 3">
+        <div class="card-body">
+          <h5 class="card-title">Producto 3</h5>
+          <p class="card-text">Debemos crear la descripción del producto.</p>
+          <button class="btn btn-dark add-to-cart" data-price="4">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="col-md-4">
+      <div class="card">
+        <img src="Insertar imágen" class="card-img-top" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Producto 2</h5>
+          <p class="card-text">Debemos crear la descripción del producto.</p>
+          <button class="btn btn-dark add-to-cart" data-price="4">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+     <div class="col-md-4">
+      <div class="card">
+        <img src="Insertar imágen" class="card-img-top" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Producto 2</h5>
+          <p class="card-text">Debemos crear la descripción del producto.</p>
+          <button class="btn btn-dark add-to-cart" data-price="4">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+     <div class="col-md-4">
+      <div class="card">
+        <img src="Insertar imágen" class="card-img-top" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Producto 2</h5>
+          <p class="card-text">Debemos crear la descripción del producto.</p>
+          <button class="btn btn-dark add-to-cart" data-price="4">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+</section>
+
+<footer class="text-center py-4 text-muted">
+  © 2025 Los Tralaleros Corp.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  let cartCount = 0;
+  let cartTotal = 0;
+
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+      cartCount++;
+      cartTotal += parseInt(button.getAttribute('data-price'));
+      document.getElementById('cartCount').textContent = cartCount;
+      alert("Producto añadido. Total: $" + cartTotal);
+    });
+  });
+
+  document.getElementById('cartButton').addEventListener('click', () => {
+    window.location.href = "pago.html";
+  });
+</script>
+
 </body>
 </html>
