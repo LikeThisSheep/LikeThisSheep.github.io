@@ -16,7 +16,7 @@ formLogin.addEventListener('submit', function(e) {
   if (email === user.email && password === user.password) {
     alert('¡Login exitoso!');
     sessionStorage.setItem('loggedIn', 'true');
-    window.location.href = 'UserVerify.html';
+    window.location.href = '../UserVerify.html';
   } else {
     alert('Correo o contraseña incorrectos.');
   }
