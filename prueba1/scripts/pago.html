@@ -20,41 +20,44 @@
 <div class="container" style="margin-top: 6rem;">
   <h1 class="mb-4">Resumen de tu compra</h1>
 
-
-  <table class="table table-bordered">
-    <thead>
+  <table class="table table-bordered align-middle">
+    <thead class="table-light">
       <tr>
         <th>Producto</th>
-        <th>Precio</th>
+        <th class="text-end">Subtotal</th>
       </tr>
     </thead>
     <tbody id="cartItems"></tbody>
     <tfoot>
       <tr>
         <th>Total</th>
-        <th id="cartTotal">$0</th>
+        <th id="cartTotal" class="text-end">$0</th>
       </tr>
     </tfoot>
   </table>
 
   <h2 class="mt-5 mb-3">Datos de pago</h2>
-  <form>
+  <form id="payForm" novalidate>
     <div class="mb-3">
       <label class="form-label">Nombre en la tarjeta</label>
       <input type="text" class="form-control" required>
+      <div class="invalid-feedback">Ingresa el nombre tal como aparece en la tarjeta.</div>
     </div>
     <div class="mb-3">
       <label class="form-label">Número de tarjeta</label>
-      <input type="text" class="form-control" maxlength="16" required>
+      <input type="text" class="form-control" inputmode="numeric" maxlength="16" required>
+      <div class="invalid-feedback">Ingresa un número de 16 dígitos.</div>
     </div>
     <div class="row">
       <div class="col-md-6 mb-3">
         <label class="form-label">Expiración</label>
         <input type="text" class="form-control" placeholder="MM/AA" required>
+        <div class="invalid-feedback">Formato MM/AA.</div>
       </div>
       <div class="col-md-6 mb-3">
         <label class="form-label">CVV</label>
-        <input type="text" class="form-control" maxlength="3" required>
+        <input type="text" class="form-control" inputmode="numeric" maxlength="3" required>
+        <div class="invalid-feedback">CVV de 3 dígitos.</div>
       </div>
     </div>
     <button type="submit" class="btn btn-success w-100">Confirmar pago</button>
@@ -62,22 +65,47 @@
 </div>
 
 <script>
-  // Este script es para cargar el carrito de forma local :brain:
+
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const cartItems = document.getElementById("cartItems");
   const cartTotal = document.getElementById("cartTotal");
 
+  cartItems.innerHTML = "";
+
   let total = 0;
   cart.forEach(item => {
+    const qty = item.qty || 1;
+    const subtotal = item.price * qty;
+    total += subtotal;
+
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${item.name}</td>
-      <td>$${item.price}</td>
+      <td>
+        <div class="fw-semibold">${item.name}</div>
+        <div class="text-muted small">Cantidad: x${qty} · $${item.price.toLocaleString('es-CL')} c/u</div>
+      </td>
+      <td class="text-end">$${subtotal.toLocaleString('es-CL')}</td>
     `;
     cartItems.appendChild(tr);
-    total += item.price;
   });
-  cartTotal.textContent = "$" + total;
+
+  cartTotal.textContent = "$" + total.toLocaleString('es-CL');
+
+
+  const form = document.getElementById("payForm");
+  form.addEventListener("submit", (e) => {
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      e.stopPropagation();
+    } else {
+      e.preventDefault();
+      alert("Pago procesado correctamente.");
+
+      localStorage.removeItem("cart");
+      window.location.href = "../../index.html";
+    }
+    form.classList.add("was-validated");
+  });
 </script>
 
 </body>

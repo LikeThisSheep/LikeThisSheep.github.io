@@ -11,6 +11,7 @@
       background-color: #fff;
       color: #000;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
     }
     .navbar {
       background-color: #fff;
@@ -22,40 +23,33 @@
     }
     .hero {
       text-align: center;
-      padding: 5rem 1rem;
+      padding: 4rem 1rem;
       background: linear-gradient(135deg, #eaf1ff, #fff);
     }
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 700;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #444;
     }
     .section-dark {
       background-color: #f8f9fa;
-      padding: 4rem 2rem;
+      padding: 2rem 1rem;
     }
     .about-card {
       background-color: #fff;
       border-radius: 1rem;
-      padding: 3rem;
+      padding: 2rem;
       text-align: center;
       transition: transform 0.3s;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      max-width: 900px;
+      margin: 0 auto;
     }
     .about-card:hover {
-      transform: translateY(-5px);
-    }
-    .about-card h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .about-card p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #555;
+      transform: translateY(-4px);
     }
     .footer {
       background-color: #fff;
@@ -71,148 +65,122 @@
   </style>
 </head>
 <body>
-
-<script src="../scripts/carrito.js"></script>
 <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="#">
       <img src="../assets/LosTralaleros.png" alt="Logo" width="30" height="30" class="me-2">
       <span class="fw-bold text-primary">Los Tralaleros</span>
     </a>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
         <li class="nav-item"><a class="nav-link" href="../scripts/productos.html">Productos</a></li>
-        <li class="nav-item"><a class="nav-link active" href="../scripts/Blogs.html">Blogs</a></li>
-        <li class="nav-item"><a class="nav-link active" href="../scripts/indexblog.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="../scripts/Blogs.html">Blogs</a></li>
+        <li class="nav-item"><a class="nav-link" href="../scripts/indexblog.html">Nosotros</a></li>
         <li class="nav-item"><a class="nav-link active" href="../scripts/contacto.html">Contacto</a></li>
       </ul>
     </div>
-  </div>
-        <div class="d-flex align-items-center">
+    <script src="../scripts/carrito.js"></script>
+    <div class="d-flex align-items-center">
       <a href="../sesion/login.html" class="me-3">
         <i class="bi bi-person fs-4"></i>
       </a>
-     <div class="dropdown">
-  <a href="#" class="btn btn-outline-dark position-relative dropdown-toggle" id="cartDropdown"
-     data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="bi bi-cart fs-5"></i> 
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
-  </a>
-  <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="cartDropdown" style="min-width: 300px;">
-    <div id="cartList"></div>
-  </ul>
-</div>
+      <div class="dropdown">
+        <a href="#" class="btn btn-outline-dark position-relative dropdown-toggle" id="cartDropdown"
+           data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-cart fs-5"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="cartDropdown" style="min-width: 300px;">
+          <div id="cartList"></div>
+        </ul>
+      </div>
+    </div>
+  </div>
 </nav>
 
-<section class="hero">
+<section class="hero mt-5 pt-5">
   <h2>Contacto Los Tralaleros</h2>
-  <p class="lead">En lo que necesites contactanos.</p>
+  <p class="lead">En lo que necesites contáctanos.</p>
 </section>
 
 <section class="section-dark">
   <div class="container">
-    <div class="about-card mx-auto">
-      <h2>Contactanos</h2>
-      <p>
-        Rellena el siguiente formulario para que podamos contactarte.
-      </p>
+    <div class="about-card">
+      <h2>Contáctanos</h2>
+      <p>Rellena el siguiente formulario para que podamos contactarte.</p>
     </div>
   </div>
-<section class="py-3 py-md-5 py-xl-8">
-              <div class="col-12 col-lg-6">
-                <div class="row align-items-lg-center h-100">
-                  <div class="col-12">
-                    <form action="#!">
-                      <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
-                        <div class="col-12">
-                          <label for="fullname" class="form-label">Nombre Completo <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
-                        </div>
-                        <div class="col-12 col-md-6">
-                          <label for="email" class="form-label">Correo Electrónico <span class="text-danger">*</span></label>
-                          <div class="input-group">
-                            <span class="input-group-text">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
-                              </svg>
-                            </span>
-                            <input type="email" class="form-control" id="email" name="email" value="" required>
-                          </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                          <label for="phone" class="form-label">Número de telefono</label>
-                          <div class="input-group">
-                            <span class="input-group-text">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                              </svg>
-                            </span>
-                            <input type="tel" class="form-control" id="phone" name="phone" value="">
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <label for="subject" class="form-label">Asunto <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control" id="subject" name="subject" value="" required>
-                        </div>
-                        <div class="col-12">
-                          <label for="message" class="form-label">Mensaje <span class="text-danger">*</span></label>
-                          <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-                        </div>
-                        <div class="col-12">
-                          <div class="d-grid">
-                            <button class="btn btn-primary btn-lg" type="submit">Enviar mensaje</button>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
+</section>
+
+<section class="py-4 py-md-5">
+  <div class="container">
+    <div class="min-vh-50 d-flex align-items-center justify-content-center">
+      <div class="w-100" style="max-width: 640px;">
+        <form id="contactForm" class="needs-validation" novalidate>
+          <div class="card shadow-sm">
+            <div class="card-body p-4 p-xl-5">
+              <div class="row gy-4">
+                <div class="col-12">
+                  <label for="fullname" class="form-label">Nombre Completo <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="fullname" name="fullname" maxlength="100" required>
+                  <div class="invalid-feedback">El nombre es obligatorio y debe tener máximo 100 caracteres.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="email" class="form-label">Correo Electrónico</label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-envelope"></i>
+                    </span>
+                    <input type="email" class="form-control" id="email" name="email" maxlength="100" placeholder="[email protected]">
+                    <div class="invalid-feedback">Correo no válido o dominio no permitido (.duoc.cl, .profesor.duoc.cl o .gmail.com).</div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="message" class="form-label">Comentario <span class="text-danger">*</span></label>
+                  <textarea class="form-control" id="message" name="message" rows="4" maxlength="500" required></textarea>
+                  <div class="form-text"><span id="charCount">0</span>/500</div>
+                  <div class="invalid-feedback">El comentario es obligatorio y debe tener máximo 500 caracteres.</div>
+                </div>
+
+                <div class="col-12">
+                  <div class="d-grid">
+                    <button class="btn btn-primary btn-lg" type="submit">Enviar mensaje</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </form>
+
+        <div id="successAlert" class="alert alert-success mt-3 d-none" role="alert">
+          ¡Mensaje enviado correctamente!
         </div>
       </div>
     </div>
   </div>
 </section>
 
-</section>
 <footer class="footer">
   <p>© 2025 Los Tralaleros Corp. Todos los derechos reservados</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../scripts/contacto.js"></script>
+
+
 <script>
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
   const cartCount = document.getElementById("cartCount");
-  const cartButton = document.getElementById("cartButton");
-
-  function updateCartCount() {
-    cartCount.textContent = cart.length;
-  }
-
+  function updateCartCount() { cartCount.textContent = cart.length; }
   updateCartCount();
-
-  cartButton.addEventListener("click", () => {
-    window.location.href = "../scripts/pago.html"; 
-  });
-
-  function addToCart(product) {
-    cart.push(product);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    updateCartCount();
-  }
-
-</script>
 </script>
 </body>
 </html>
-
