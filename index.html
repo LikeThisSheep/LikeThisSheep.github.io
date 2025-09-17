@@ -34,7 +34,15 @@
       border-radius: 1rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       transition: transform 0.2s;
+      height: 100%;
+      width: 1000;
+      
     }
+    .card-img-top {
+    height: 70%;
+    object-fit: cover; /* keeps aspect ratio, crops if needed */
+  }
+ 
     .card:hover {
       transform: translateY(-5px);
     }
@@ -88,17 +96,17 @@
 <section class="container py-5">
   <div class="row g-4">
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/Sakuramiku.png" class="card-img-top" alt="Producto 1">
         <div class="card-body">
           <h5 class="card-title">Figura Sakura Miku</h5>
-          <p class="card-text">Figura oficial de Hatsune Miku. $20.000</p>
+          <p class="card-text">Figura oficial de Hatsune Miku. $20.000 </p>
           <button class="btn btn-dark add-to-cart" data-price="20000">Añadir al carrito</button>
         </div>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/Hornet.jpg" class="card-img-top" alt="Producto 2">
         <div class="card-body">
           <h5 class="card-title">Figura Hornet </h5>
@@ -108,7 +116,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/NendoroidHollowKnight.png" class="card-img-top" alt="Producto 3">
         <div class="card-body">
           <h5 class="card-title">Figura Nendoroid The Knight </h5>
@@ -121,7 +129,7 @@
   <!--Segunda fila:-->
   <div class="row g-4">
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/LoRKeyChain+ArtBook.png" class="card-img-top" alt="Producto 4">
         <div class="card-body">
           <h5 class="card-title">Pack Library of Ruina</h5>
@@ -131,7 +139,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/PosterLoR.jpg" class="card-img-top" alt="Producto 5">
         <div class="card-body">
           <h5 class="card-title">Poster Library of Ruina</h5>
@@ -141,7 +149,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/InvitacionLoR.jpg" class="card-img-top" alt="Producto 6">
         <div class="card-body">
           <h5 class="card-title">Replica Invitacion LoR</h5>
@@ -154,7 +162,7 @@
   <!---Tercera fila-->
   <div class="row g-4">
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/BasicCat.png" class="card-img-top" alt="Producto 7">
         <div class="card-body">
           <h5 class="card-title">Gato Basico</h5>
@@ -164,7 +172,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/AxeCat.png" class="card-img-top" alt="Producto 8">
         <div class="card-body">
           <h5 class="card-title">Gato Hacha</h5>
@@ -174,7 +182,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/DoomSlayer.png" class="card-img-top" alt="Producto 9">
         <div class="card-body">
           <h5 class="card-title">Figura DoomSlayer</h5>
@@ -187,7 +195,7 @@
   <!--Cuarta Fila-->
     <div class="row g-4">
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/medic.png" class="card-img-top" alt="Producto 10">
         <div class="card-body">
           <h5 class="card-title">Figura Medic</h5>
@@ -197,7 +205,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/spy.png" class="card-img-top" alt="Producto 11">
         <div class="card-body">
           <h5 class="card-title">Figura Spy</h5>
@@ -207,7 +215,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/mambo.png" class="card-img-top" alt="Producto 12">
         <div class="card-body">
           <h5 class="card-title">Figura Matikanetannhauser</h5>
@@ -220,7 +228,7 @@
   <!--Quinta Fila-->
   <div class="row g-4">
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/gorda.png" class="card-img-top" alt="Producto 13">
         <div class="card-body">
           <h5 class="card-title">Figura de Kasane Teto</h5>
@@ -230,7 +238,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/gengar.png" class="card-img-top" alt="Producto 14">
         <div class="card-body">
           <h5 class="card-title">Peluche Gengar</h5>
@@ -240,7 +248,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card h-100">
         <img src="prueba1/assets/jimbo.png" class="card-img-top" alt="Producto 15">
         <div class="card-body">
           <h5 class="card-title">Peluche Jimbo</h5>
