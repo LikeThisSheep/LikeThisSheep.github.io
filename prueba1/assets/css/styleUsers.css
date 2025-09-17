@@ -1,0 +1,87 @@
+body {
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.logo {
+  margin-bottom: 15px;
+}
+
+.icono {
+  font-size: 2rem;
+}
+
+.marca {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.azul {
+  color: #2d6cdf;
+}
+
+.card-form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  width: 360px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn-tab {
+  border: none;
+  background: #eee;
+  padding: 8px 20px;
+  margin: 0 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9rem;
+}
+
+.btn-tab.active {
+  background: #ff5a5a;
+  color: white;
+}
+
+.input-rounded {
+  border-radius: 20px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+}
+
+.checkboxes {
+  margin: 15px 0;
+}
+
+.form-check-input {
+  margin-right: 6px;
+}
+
+.btn-registrarse {
+  padding: 12px;
+  background: #ff5a5a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.btn-registrarse:hover {
+  background: #e04a4a;
+}
