@@ -72,7 +72,7 @@
 </head>
 <body>
 
-
+<script src="carrito.js"></script>
 <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="#">
@@ -95,12 +95,27 @@
       </ul>
     </div>
   </div>
+      <div class="d-flex align-items-center">
+      <a href="../sesion/login.html" class="me-3">
+        <i class="bi bi-person fs-4"></i>
+      </a>
+     <div class="dropdown">
+  <a href="#" class="btn btn-outline-dark position-relative dropdown-toggle" id="cartDropdown"
+     data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-cart fs-5"></i> 
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="cartDropdown" style="min-width: 300px;">
+    <div id="cartList"></div>
+  </ul>
+</div>
 </nav>
+
 
 <section class="hero">
   <h2>Los Tralaleros Corp</h2>
   <p class="lead">Más que una empresa sobre merch de videojuegos.</p>
-  <a href="https://likethissheep.github.io" class="btn btn-dark btn-lg mt-3">Ver catálogo</a>
+  <a href="../../index.html" class="btn btn-dark btn-lg mt-3">Ver catálogo</a>
 </section>
 
 <section class="section-dark">
@@ -146,6 +161,29 @@
     </div>
   </div>
 </section>
+<script>
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const cartCount = document.getElementById("cartCount");
+  const cartButton = document.getElementById("cartButton");
+
+  function updateCartCount() {
+    cartCount.textContent = cart.length;
+  }
+
+  updateCartCount();
+
+  cartButton.addEventListener("click", () => {
+    window.location.href = "../scripts/pago.html"; 
+  });
+
+  function addToCart(product) {
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+  }
+
+</script>
 
 <footer class="footer">
   <p>© 2025 Los Tralaleros Corp. Todos los derechos reservados</p>
