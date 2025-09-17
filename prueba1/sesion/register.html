@@ -14,98 +14,69 @@
       <img src="/prueba1/assets/LosTralaleros.png" alt="Logo" width="30" height="30" class="me-2">
       <span class="fw-bold text-primary">Los Tralaleros</span>
     </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="likethissheep.github.io">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="likethissheep.github.io">Productos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
-        <li class="nav-item"><a class="nav-link" href="/prueba1/scripts/indexblog.html">Nosotros</a></li>
-      </ul>
-    </div>
-
-    <div class="d-flex align-items-center">
-      <a href="prueba1/sesion/login.html" class="me-3">
-        <i class="bi bi-person fs-4"></i>
-      </a>
-     <div class="dropdown">
-  <a href="#" class="btn btn-outline-dark position-relative dropdown-toggle" id="cartDropdown"
-     data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="bi bi-cart fs-5"></i>
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
-  </a>
-  <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="cartDropdown" style="min-width: 300px;">
-    <div id="cartList"></div>
-  </ul>
-</div>
-
-    </div>
   </div>
 </nav>
 
-  <div class="container text-center mt-5">
-    <h1 class="titulo">Registrarse</h1>
-    <div class="logo">
-      <span class="icono"><img src="../assets/img/logo_tralaleros.jpeg" alt=""></span>
-      <p class="marca">Los <span class="azul">Tralaleros</span></p>
-    </div>
+<div class="container text-center mt-5">
+  <h1 class="titulo">Registrarse</h1>
+  <div class="card-form mx-auto">
 
-    <div class="card-form mx-auto">
-   
-      <div class="tabs mb-3">
-        <a href="login.html" class="btn-tab">Iniciar sesión</a>
-        <button class="btn-tab active">Registrarse</button>
+    <form id="formRegistro">
+      <div class="mb-3 text-start">
+        <label class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control input-rounded" id="registerEmail" required>
       </div>
 
-      <form id="formRegistro">
-        <div class="mb-3 text-start">
-          <label class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control input-rounded" id="registerEmail" required>
-        </div>
+      <div class="mb-3 text-start">
+        <label class="form-label">Clave</label>
+        <input type="password" class="form-control input-rounded" id="registerPassword" required>
+      </div>
 
-        <div class="mb-3 text-start">
-          <label class="form-label">Clave</label>
-          <input type="password" class="form-control input-rounded" id="registerPassword" required>
-        </div>
+      <div class="mb-3 text-start">
+        <label class="form-label">Confirmar Clave</label>
+        <input type="password" class="form-control input-rounded" id="registerPassword2" required>
+      </div>
 
-        <div class="mb-3 text-start">
-          <label class="form-label">Confirmar Clave</label>
-          <input type="password" class="form-control input-rounded" id="registerPassword2" required>
-        </div>
+      <div class="mb-3 text-start">
+        <label class="form-label">Número de teléfono</label>
+        <input type="tel" class="form-control input-rounded" id="registerPhone" placeholder="+569">
+      </div>
 
-        <div class="mb-3 text-start">
-          <label class="form-label">Número de teléfono</label>
-          <input type="tel" class="form-control input-rounded" id="registerPhone" placeholder="+569">
-        </div>
+      <div class="mb-3 text-start">
+        <label class="form-label">Región</label>
+        <select class="form-control input-rounded" id="registerRegion" required>
+          <option value="">Seleccione una región</option>
+        </select>
+      </div>
 
-        <div class="checkboxes text-start">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="leido" required>
-            <label class="form-check-label" for="leido">Leí los términos y condiciones</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="terminos" required>
-            <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
-          </div>
-        </div>
+      <div class="mb-3 text-start">
+        <label class="form-label">Comuna</label>
+        <select class="form-control input-rounded" id="registerComuna" required>
+          <option value="">Seleccione una comuna</option>
+        </select>
+      </div>
 
-        <button type="submit" class="btn btn-registrarse w-100 mt-3">Registrarse</button>
-      </form>
-    </div>
+      <div class="checkboxes text-start">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="terminos" required>
+          <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-registrarse w-100 mt-3">Registrarse</button>
+    </form>
   </div>
- <footer>
-    <div class="container text-center">
-      <p>Tu tienda especializada en figuras de videojuegos y coleccionables.</p>
-      <p>Email: info@tralaleros.com | Tel: +569 123456</p>
-      <p>Av. Siempre Viva 123, Santiago</p>
-    </div>
-  </footer>
-  <script src="../assets/js/register.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+
+<footer>
+  <div class="container text-center">
+    <p>Tu tienda especializada en figuras de videojuegos y coleccionables.</p>
+    <p>Email: info@tralaleros.com | Tel: +569 123456</p>
+    <p>Av. Siempre Viva 123, Santiago</p>
+  </div>
+</footer>
+
+<script src="../assets/js/register.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
